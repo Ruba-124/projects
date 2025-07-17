@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspots - Women Safety</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            border-radius: 10px;
+            width: 120px;
+            background-image: linear-gradient(to right, #0004ff, #000000);
+            margin-bottom: 50px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .header {
+            background-image: linear-gradient(to right, #0004ff, #ff4500); /* Orange to Red */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white; /* Use white text for better contrast */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px; /* Adjust the height as needed */
+            background-color: #ddd; /* Placeholder background color */
+        }
+
+        .list {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            cursor: pointer; /* Make it look clickable */
+            position: relative; /* For absolute positioning of the pseudo-element */
+        }
+
+        .list-item::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .list-item:first-child::after {
+            background-color: red; /* First item red */
+        }
+
+        .list-item:nth-child(2)::after {
+            background-color: green; /* Second item green */
+        }
+
+        .list-item:last-child::after {
+            background-color: orange; /* Last item orange */
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0069d9;
+        }
+
+        .logOut {
+            color: #e03d00; /* Darker red for hover effect */
+        }
+
+        .map-selector {
+            margin-bottom: 20px;
+        }
+
+        .map-selector label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Women Safety</h2>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="Facesdetected.html">Faces Detected</a></li>
+                <li><a href="females.html">Females</a></li>
+                <li><a href="males.html">Male</a></li>
+                <li><a href="sneha.html">Alone Women</a></li>
+                <li><a href="sos.html">SOS</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="map.html">Hotspots</a></li>
+                <li><a href="#" class="logOut">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Danger-Prone Areas in India</h1>
+                <p>Below are the areas identified as high risk for women's safety in India.</p>
+            </div>
+            <div class="map-container">
+                <h2 id="map-title">Map of India</h2>
+                <div class="map">
+                    <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7059506.264303636!2d78.562150411126!3d20.59368411042608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2494aaabbbb1d3%3A0x1234abcd!2sIndia!5e0!3m2!1sen!2sin!4v1631259806391!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <h2>List of Hotspots</h2>
+                <ul class="list">
+                    <li class="list-item" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.3251966709868!2d88.37834748132582!3d22.604328402692932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0277c174650abd%3A0x5ae8e0074619fab9!2sR%20G%20Kar%20Medical%20College%20and%20Hospital!5e0!3m2!1sen!2sin!4v1725558182583!5m2!1sen!2sin" data-title="R G Kar Medical College and Hospital">
+                        <strong>Area 1:</strong> R G Kar Medical College and Hospital
+                    </li>
+                    <li class="list-item" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235806.61489892862!2d88.21748396647394!3d22.561205463407507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02711f0ecbd5a7%3A0xaa1c88e20bd500a3!2sKalitala%20Kali%20Temple!5e0!3m2!1sen!2sin!4v1725558895129!5m2!1sen!2sin" data-title="Kalitala Kali Temple around">
+                        <strong>Area 2:</strong> Kalitala Kali Temple around
+                    </li>
+                    <li class="list-item" data-map-url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.749774386956!2d76.71417057529162!3d28.697130875629576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d76917a152ed9%3A0xbe90d99a32a47af1!2sAgarpur%2C%20Chhara%2C%20Haryana%20124504!5e0!3m2!1sen!2sin!4v1725559419771!5m2!1sen!2sin" data-title="Agarpur, Chhara, Haryana 124504">
+                        <strong>Area 3:</strong> Agarpur, Chhara, Haryana 124504
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to update the map and heading based on the selected area's URL and title
+        function updateMap(mapUrl, title) {
+            var iframe = document.getElementById('map-iframe');
+            var mapTitle = document.getElementById('map-title');
+            iframe.src = mapUrl;
+            mapTitle.textContent = title;
+        }
+
+        // Attach click event listeners to list items
+        document.querySelectorAll('.list-item').forEach(function(item) {
+            item.addEventListener('click', function() {
+                var mapUrl = this.getAttribute('data-map-url');
+                var title = this.getAttribute('data-title');
+                updateMap(mapUrl, title);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts - Women Safety Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            border-radius: 10px;
+            width: 120px;
+            background-image: linear-gradient(to right, #0004ff, #000000);
+            margin-bottom: 50px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .header {
+            background-image: linear-gradient(to right, #0004ff, #ff4500); /* Orange to Red */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .alert-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .alert-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert-item p {
+            margin: 0;
+        }
+
+        .alert-item .info {
+            font-weight: bold;
+        }
+
+        .alert-item .description {
+            margin-top: 5px;
+        }
+
+        .alert-item.male {
+            border-left: 5px solid #007bff; /* Blue color for males */
+        }
+
+        .alert-item.female {
+            border-left: 5px solid #ff69b4; /* Pink color for females */
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+                    background-color: #0069d9;
+                    .logOut {
+            color: #fff;
+            background-color: #ff4500; /* Red color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+    }
+        .logOut {
+    color: #fff;
+    background-color: #ff4500; /* Red color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    }
+    .logOut {
+        color: #e03d00; /* Darker red for hover effect */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Women Safety</h2>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="Facesdetected.html">Faces Detected</a></li>
+                <li><a href="#">Females</a></li>
+                <li><a href="#">Male</a></li>
+                <li><a href="#">Alone Women</a></li>
+                <li><a href="SOS.html">SOS</a></li>
+                <li><a href="#" class="active">Alerts</a></li>
+                <li><a href="map.html">Hotspots</a></li>
+                <li><a href="#" class="logOut">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Alerts</h1>
+            </div>
+            <div class="alert-container">
+                <h2>Recent Alerts</h2>
+                <div class="alert-item male">
+                    <p class="info">ID: 1 | Username: john_doe</p>
+                    <p class="description">Problem: Theft - Reported a stolen bag in the park.</p>
+                </div>
+                <div class="alert-item female">
+                    <p class="info">ID: 2 | Username: jane_smith</p>
+                    <p class="description">Problem: Harassment - Reported inappropriate behavior at the bus stop.</p>
+                </div>
+                <div class="alert-item female">
+                    <p class="info">ID: 3 | Username: alice_jones</p>
+                    <p class="description">Problem: Theft - Wallet stolen from her car.</p>
+                </div>
+                <div class="alert-item male">
+                    <p class="info">ID: 4 | Username: mike_brown</p>
+                    <p class="description">Problem: Harassment - Threatening messages received.</p>
+                </div>
+                <div class="alert-item female">
+                    <p class="info">ID: 5 | Username: emma_williams</p>
+                    <p class="description">Problem: Theft - Jewelry stolen from her house.</p>
+                </div>
+                <a href="javascript:history.back()" class="btn">Go Back</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
